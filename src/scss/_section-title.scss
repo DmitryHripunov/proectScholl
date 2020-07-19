@@ -1,0 +1,14 @@
+.section-link {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  margin: 0;
+  width: 97%;
+  border-bottom: 2px solid #302626;
+  @include arrow;
+}

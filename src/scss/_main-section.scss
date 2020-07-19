@@ -1,0 +1,246 @@
+.main-section {
+  padding: 30px 0;
+
+    .main-section__banner {
+      width: 65%;
+      margin-left: 0;
+    }
+
+    .main-section__img {
+      height: 100%;
+    }
+
+  .main-section__figure  {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(0.32deg, rgba(0, 0, 0, 0.85) 0.46%, rgba(0, 0, 0, 0) 98.69%);
+      top: 140px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .main-section__figcaption {
+    position: absolute;
+    bottom: 55px;
+    left: 35px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: #FFFFFF;
+    max-width: 550px;
+    z-index: 1;
+  }
+
+  .main-section__aside {
+    @include aside-bar;
+    width: 352px;
+    .school-banner {
+      position: relative;
+      background-image: url("../img/s66.jpg");
+      position: relative;
+      height: 185px;
+      width: 100%;
+      color: #FFFFFF;
+      padding: 100px 0 12px;
+      &::after {
+        @include all-position;
+        content: "";
+        background: linear-gradient(168.2deg, rgba(0, 0, 0, 0.52) 6.53%, rgba(0, 0, 0, 0) 35.84%), linear-gradient(50.54deg, rgba(0, 0, 0, 0.52) 15.67%, rgba(0, 0, 0, 0) 100.2%);
+      }
+      .school-banner__title {
+        position: absolute;
+        font-weight: 500;
+        top: 7px;
+        left: 24px;
+        font-size: 10px;
+        text-transform: uppercase;
+        z-index: 1;
+      }
+      .school-banner__items {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 3);
+      }
+
+      .school-banner__items:nth-child(2)::after {
+        position: absolute;
+        content: "";
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .school-banner__desc {
+        margin: 0 auto;
+        font-size: 32px;
+        z-index: 1;
+      }
+      .school-banner__figcaption {
+        z-index: 1;
+        font-family: "ptsans";
+        font-size: 16px;
+        margin: 0 auto;
+        width: 100px;
+        text-align: center;
+        line-height: 85%;
+      }
+    }
+
+    .director {
+      position: relative;
+      margin: 16px 0;
+      width: 100%;
+      height: 120px;
+      background-color: #edf2f5;
+      padding-left: 120px;
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("../img/s64.jpg");
+        top: 0;
+        left: 0;
+        width: 95px;
+        height: 100%;
+      }
+
+      .block-link {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        @include arrow;
+        background-position: 200px 82px;
+      }
+
+      .director__title {
+        color: #56688e;
+        text-transform: uppercase;
+        font-size: 10px;
+        margin: 12px 0;
+        text-align: left;
+         font-weight: 500;
+      }
+
+      .director__name {
+        text-align: left;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0.15px;
+        margin: 0;
+        width: 200px;
+      }
+    }
+
+    .docs {
+      height: 95px;
+      width: 100%;
+      .docs__data {
+        display: inline-block;
+        background-color: #edf2f5;
+        width: 210px;
+        padding: 20px 20px;
+        font-weight: 600;
+        @include arrow;
+        background-position: 170px 60px;
+      }
+
+      .docs__app {
+        position: relative;
+        width: 130px;
+        border: 1px solid #DADFE6;
+        text-align: center;
+        padding: 14px;
+        font-family: "ptsans";
+        @include arrow;
+        background-position: 95px 60px;
+        &::after {
+          position: absolute;
+          content: "";
+          background-image: url("../img/svg/doc.svg");
+          background-repeat: no-repeat;
+          top: 45px;
+          left: 25px;
+          width: 25px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}
+
+// @media(max-width: 1410px) {
+//     .main-section {
+//       .main-section__banner {
+//       width: 65%;
+//     }
+//     .main-section__aside {
+//       width: 34%;
+//     }
+//   }
+// }
+
+@media(max-width: 1060px) {
+    .main-section {
+      .main-section__container {
+      flex-direction: column;
+      margin: auto;
+      align-items: center;
+    }
+
+    .main-section__banner {
+      margin: auto;
+      width: 80%;
+    }
+
+    .main-section__aside {
+      margin-top: 20px;
+      width: 80%;
+    }
+
+    .main-section__img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+    .main-section {
+      .main-section__banner {
+        width: 100%;
+      }
+
+      .main-section__aside {
+        width: 100%;
+      }
+    }
+  }
+
+@media(max-width: 650px) {
+    .main-section {
+      padding-top: 120px;
+
+      .main-section__figcaption {
+        font-size: 16px;
+        max-width: 260px;
+      }
+    }
+  }
+
+@media(max-width: 400px) {
+  .main-section {
+    .main-section__aside {
+      .director {
+        padding-left: 100px;
+      }
+    }
+  }
+}

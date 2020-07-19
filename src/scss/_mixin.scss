@@ -1,0 +1,30 @@
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin aside-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin all-position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin arrow {
+  background-image: url("../img/svg/Shape.svg");
+  background-repeat: no-repeat;
+}

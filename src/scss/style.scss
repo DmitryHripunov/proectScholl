@@ -1,0 +1,20 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+@import '_functions.scss';
+
+
+@import '_fonts';
+@import '_normalize';
+@import '_global';
+
+@import 'header-page';
+@import 'nav-page';
+@import 'menu-page';
+@import 'form-search';
+@import 'main-section';
+@import 'swipe';
+@import 'section-title';
+@import 'news';
+@import 'about';
+@import 'links';
+@import 'footer';

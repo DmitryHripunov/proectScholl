@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'ptsans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('ptsans Regular'), local('ptsans'),
+       url('../fonts/ptsans.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/ptsans.woff') format('woff'), /* Modern Browsers */
+}
+
+@font-face {
+  font-family: 'lato';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('lato Regular'), local('lato-medium-webfont'),
+       url('../fonts/lato-medium-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-medium-webfont.woff') format('woff'), /* Modern Browsers */
+}
+
+@font-face {
+  font-family: 'lato';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('lato heavy'), local('lato-heavy-webfont'),
+       url('../fonts/lato-heavy-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-heavy-webfont.woff') format('woff'), /* Modern Browsers */
+}

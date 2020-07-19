@@ -1,0 +1,65 @@
+
+.swiper-btn-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-swipe {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background-color: #54688F;
+  color: #fff;
+  border: 1px solid #7d8dae;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+
+.btn-swipe:hover {
+  background-color: #435372;
+  transition: background-color .3s ease;
+}
+
+.btn-swipe:focus {
+  outline: none;
+}
+
+.swiper-pagination-wrapper {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  max-width: 100%;
+  justify-content: space-between;
+  z-index: 10;
+  display: flex;
+}
+
+.swiper-pagination-bullet {
+  background-color: #777777 !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin-left: 10px;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+}
+
+@media(max-width: 1000px) {
+ .btn-swipe {
+    width: 35px;
+    height: 35px;
+ } 
+}
+
+@media(max-width: 650px) {
+ .swiper-btn-wrapper {
+   display: none;
+ } 
+}

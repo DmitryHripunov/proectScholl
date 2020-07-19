@@ -1,0 +1,34 @@
+.menu-page {
+  position: absolute;
+  display: none;
+
+}
+
+.open-menu .menu-page {
+  top: 140px;
+  left: 0;
+  right: 0;
+  display: block; 
+  width: 100%;
+  height: 1000px;
+  z-index: 9;
+  background-color: #fff;
+  padding: 20px;
+  animation: visible .3s ease;
+}
+
+@keyframes visible {
+  0% { 
+    opacity: 0; 
+  }   
+    100% { 
+      opacity: 1; 
+    }
+}
+
+
+@media(max-width: 550px) {
+  .open-menu .menu-page {
+    top: 200px;
+  }
+}
