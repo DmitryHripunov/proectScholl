@@ -7,8 +7,10 @@
 @import '_normalize';
 @import '_global';
 
+// index.html
 @import 'header-page';
 @import 'nav-page';
+@import 'menu';
 @import 'menu-page';
 @import 'form-search';
 @import 'main-section';
@@ -16,5 +18,24 @@
 @import 'section-title';
 @import 'news';
 @import 'about';
+@import 'banner-desc';
 @import 'links';
 @import 'footer';
+@import 'modal';
+@import 'form-submit';
+@import 'banner-desc';
+
+// basic-information.html
+@import 'basic-information';
+@import 'bread-crumb';
+@import 'aside-menu'; 
+@import 'information-swipe'; 
+@import 'information-table'; 
+@import 'dropdown-list'; 
+@import 'block-docs__menu';
+@import 'block-lists';
+@import 'contacts-page';
+@import 'insaide-pages';
+@import 'block-navigation';
+
+

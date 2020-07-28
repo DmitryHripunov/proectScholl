@@ -1,0 +1,67 @@
+.information-swipe {
+  padding: 0 0 16px 0;
+  margin-left: 0;
+  margin-right: auto;
+  width: 600px;
+  position: relative;
+
+  .information-swipe__link {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    background-color: #edf2f4;
+    background-image: url("../img/license.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+  }
+
+  .information-swipe__items:not(:last-child) {
+    margin-right: -10px;
+  }
+
+  .information-swipe__link::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/krestik.png");
+    width: 24px;
+    height: 24px;
+    top: 6px;
+    right: 6px;
+  }
+
+  .information-swipe-wrapper {
+    display: none;
+  }
+}
+
+// @media (max-width: 830px) {
+//   .information-swipe {
+//     width: 600px;
+//   }
+// }
+
+@media (max-width: 768px) {
+  .information-swipe {
+    max-width: 100%;
+    margin: 0 auto;  
+    padding-bottom: 20px;
+
+    .information-swipe-wrapper {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .swiper-pagination-bullet {
+      background-color: rgba(38, 71, 138, 0.5) !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #246AF1 !important; 
+    }
+  }
+}

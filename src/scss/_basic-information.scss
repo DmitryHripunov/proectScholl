@@ -1,0 +1,33 @@
+
+@media (max-width: 768px) {
+  .inside-nav-list,
+  .inside-nav-searh {
+    display: none;
+  }
+
+  .open-menu {
+    .inside__nav {
+      display: block;
+    }
+
+    .inside-nav-searh {
+      display: block;
+    }
+  }
+
+  .basic-information {
+    .basic-block,
+    .links-block,
+    .block-docs,
+    .block-list,
+    .contacts-page,
+    .dropdown-list {
+      display: none;
+    }
+
+    .table-page {
+      padding-bottom: 10px;
+      margin-bottom: 70px;
+    }
+  }
+}

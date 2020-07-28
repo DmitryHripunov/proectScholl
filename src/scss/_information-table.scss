@@ -1,0 +1,109 @@
+.table-page {
+  width: 100%;
+
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .first-row {
+    display: inline-block;
+    font-family: "ptsans";
+    font-size: 14px;
+    color: rgba(52, 55, 65, 0.6);
+    border: 1px solid $color-grey;
+    padding: 11px 3px 10px 10px;
+    width: 100%;
+  }
+  .table__link {
+    float: right;
+    display: block;
+    margin: 0 10px 0 10px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 24px;
+    background-size: 16px;
+    display: block;
+  }
+
+  .print {
+    background-image: url("../img/svg/printer.svg");
+  }
+
+  .full-screen {
+    background-image: url("../img/svg/fullscreen_24px.svg");
+  }
+
+  .table__heading {
+    font-family: "ptsans";
+    font-size: 12px;
+    border: 1px solid $color-grey;
+    padding: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #EDF2F4;
+    color: #343741;
+    letter-spacing: -0.08px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+
+  .table__cell {
+    border: 1px solid $color-grey;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 0 5px 5px;
+    text-align: left;
+    height: 65px;
+    font-family: "ptsans";
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+    color: #343741;
+  }
+
+  .table__cell:first-child,
+  .table__heading:first-child {
+    // max-width: 171px;
+    // padding-right: 7px;
+    width: 25%;
+  }
+
+  .table__cell:nth-child(2) {
+    width: 13%;
+    // max-width: 75px;
+    // padding-right: 14px;
+  } 
+  .table__cell:nth-child(3) {
+    width: 16%;
+    // max-width: 75px;
+    // padding-right: 42px;
+  }
+  .table__cell:nth-child(4) {
+    width: 27%;
+    // max-width: 175px;
+    // padding-right: 14px;
+  }
+
+  .table__cell:last-child,
+  .table__heading:last-child {
+    width: 19%;
+  }
+
+  .table__heading:nth-child(2) {
+    width: 29%;
+  }
+  .table__heading:nth-child(3) {
+    width: 27%;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .table-page {
+    overflow-x: scroll;
+    .table {
+      width: 780px;
+    }
+  }
+}

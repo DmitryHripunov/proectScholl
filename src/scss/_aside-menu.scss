@@ -1,0 +1,102 @@
+.aside-menu {
+  min-width: 320px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 66px;
+
+  .tab-label {
+    padding: 15px 50px 15px 0;
+    margin-bottom: -1px;
+    border: none;
+    font-family: "ptsans";
+    border-top: 1px  solid #C1C9D2;
+    border-bottom: 1px solid #C1C9D2;
+    cursor: pointer;
+    transition: color .3s;
+    border-collapse: collapse;
+  }
+
+  .aside-menu__link {
+    font-size: 16px !important;
+  }
+
+  .menu-page__title {
+    padding: 15px 50px 15px 0;
+    border-top: 1px  solid #C1C9D2;
+    margin-bottom: -1px;
+    margin-top: 0;
+    font-family: "ptsans";
+    cursor: pointer;
+    transition: color .3s;
+    color: #333;
+    font-weight: bold !important;
+    font-size: 16px;
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .tab-label::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/krestik.png");
+    width: 24px;
+    height: 24px;
+    right: 17px;
+    top: 17px;
+    color: #54688fa3;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .menu-page__items {
+    display: none;
+    height: 0;
+  }
+
+  .checked .tab-label {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #C1C9D2;
+    color: $color-link;
+    transition: color .2s ease;
+  }
+
+  .checked .tab-label::after {
+    background-image: url("../img/minus1.png");
+    transition: opacity .3s ease, max-height 1.2s ease-in;
+    right: 17px;
+    top: 16px;
+  }
+
+  .checked .menu-page__items {
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    padding: 0 0 4px 16px;
+    display: inline-block;
+    transition: transform .3s ease, max-height 1.2s ease-in;
+  }
+
+  .menu-page__items:last-child {
+    margin-bottom: 25px;
+  }
+
+  .menu-page__link {
+    display: block;
+    font-family: "ptsans";
+    font-size: 14px;
+    transition: color .3s ease;
+    font-weight: normal;
+  }
+
+  .menu-page__link:hover {
+    color: #246AF1;
+    transition: color .3s ease;
+  }
+}
+
+@media(max-width: 1150px) {
+ .aside-menu {
+   display: none;
+ } 
+}

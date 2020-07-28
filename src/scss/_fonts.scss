@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: 'ptsans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('ptsans Bold'), local('ptsans'),
+       url('../fonts/PTSans-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/PTSans-Bold.woff') format('woff'), /* Modern Browsers */
+}
+
+@font-face {
   font-family: 'lato';
   font-style: normal;
   font-weight: 500;

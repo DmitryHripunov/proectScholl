@@ -1,0 +1,214 @@
+.feedback {
+  .input {
+    display: block;
+    position: relative;
+    padding-top: 20px;
+    border: none;
+    border-bottom: 1px solid rgba(84, 104, 143, 0.64);
+    transition: opacity 0.35s;
+    width: 100%;
+    max-width: 100%;
+    height: 48px;
+    margin-bottom: 26px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #06f;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      transition: transform 0.175s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+
+  .input__field {
+    display: block;
+    width: 100%;
+    padding: 0 0 3px;
+    background: transparent;
+    border: none;
+    color: #000;
+  }
+
+  .input__label {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    padding: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(84, 104, 143, 0.64);
+    font-size: 16px;
+    font-weight: 300;
+    pointer-events: none;
+    transform: translateZ(0);
+    transform-origin: 0 0;
+    user-select: none;
+    cursor: text;
+    transition: transform 0.175s cubic-bezier(0.215, 0.61, 0.355, 1),
+      color 0.175s cubic-bezier(0.215, 0.61, 0.355, 1),
+      font-size 0.175s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .input-focused::after {
+    transform: scaleX(1);
+  }
+
+  .input-focused .input__label {
+    transform: translateY(-20px) scale(0.75) translateZ(0);
+  }
+
+  .invalid .input__label {
+    transform: translateY(-20px) scale(0.75) translateZ(0);
+  }
+
+  .invalid {
+    border-color: red;
+  }
+
+  .input__field:focus,
+  .textarea:focus {
+    outline: none;
+  }
+
+  .textarea {
+    position: relative;
+    width: 100%;
+    margin: 26px 0;
+    border: 1px solid rgba(84, 104, 143, 0.64);
+    padding: 16px;
+  }
+
+  .textarea::placeholder {
+    color: rgba(84, 104, 143, 0.64);
+  }
+
+  .input__footnote {
+    display: inline-block;
+    margin-top: 7px;
+    font-family: "ptsans";
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: rgba(84, 104, 143, 0.64);
+  }
+
+  .checkbox[type="checkbox"] {
+    border: 1px solid rgba(84, 104, 143, 0.64);
+  }
+
+  .checkbox {
+    margin-top: 4px;
+    margin-right: 16px;
+  }
+
+  .feedback__btn {
+    cursor: pointer;
+    border: none;
+  }
+}
+
+// feedback
+.feedback {
+  .fedback-area {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .select {
+    position: relative;
+    border: none;
+    border-bottom: 1px solid rgba(84, 104, 143, 0.64);
+    width: 100%;
+    padding: 10px 0;
+    color: rgba(84, 104, 143, 0.64);
+    margin-bottom: 26px;
+    cursor: pointer;
+  }
+
+  .option {
+    color: rgba(84, 104, 143, 0.64);
+  }
+
+  .select:focus {
+    outline: none;
+  }
+
+  // /////////////////////////////////////@extend
+  .input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .add-file {
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "ptsans";
+    padding: 10px 36px 10px 10px;
+    min-width: 210px;
+    height: 45px;
+    border: 1px solid #c1c9d2;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url("../img/svg/file.svg");
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    background-color: transparent;
+  }
+
+  .inside-btn {
+    margin: 16px 35px 16px 0;
+    width: 210px;
+  }
+
+  .checkbox__footnote {
+    font-family: "ptsans";
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: rgba(84, 104, 143, 0.64);
+    max-width: 270px;
+  }
+
+  .checkbox__link {
+    display: inline-block;
+    border-bottom: 1px solid rgba(84, 104, 143, 0.64);
+  }
+
+  .checkbox__footnote-error {
+    position: relative;
+    margin-left: 35px;
+    padding-left: 22px;
+
+    &::before {
+      position: absolute;
+      content: "+";
+      left: 0;
+      top: 0;
+      transform: rotate(45deg);
+      color: #f90000;
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-width: 508px) {
+  .feedback {
+    .checkbox__footnote-error {
+      position: relative;
+      margin-left: 0;
+      margin-top: 20px;
+      padding-left: 22px;
+    }
+  }
+}

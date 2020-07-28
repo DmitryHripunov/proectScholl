@@ -1,62 +1,48 @@
 'use strict'
 
+const bodyEl = document.body;
 const searchEl = document.querySelector('.submit-js');
 const headerEl = document.querySelector('.header-js');
 const searhFieldEl = document.querySelector('.search-js');
 const closeEl = document.querySelector('.search-close-js');
 
 const openMenuEl = document.querySelectorAll('.open-menu-js');
+const menuEl = document.querySelectorAll('.menu-page');
 
-openMenuEl.forEach((menuLink) => {
-  menuLink.addEventListener('click', function (e) {
-    e.preventDefault()
-    headerEl.classList.toggle('open-menu');
+const tabEl = document.querySelectorAll('.tab-label-js');
+const tabListEl = document.querySelector('.menu-page__list-js'); 
 
-  });
-});
+const modalContentEl = document.querySelector('.modal-content-js');
+const modalElem = document.querySelector('.modal-js');
+const focusFieldEl = document.querySelector('.input__field');
+const modalCloseEl = document.querySelector('.close-modal-js');
+const successBtnEl = document.querySelector('.success__btn-js');
+
+const inputsEl = document.querySelectorAll('.input__field');
+const labelEl = document.querySelectorAll('.input');
+const maillEl = document.querySelector('.mail');
+const inputMask = document.querySelector('.tel');
+
+
+const bannerDescBtnEl = document.querySelectorAll('.about__main-btn-js');
+const figureEl = document.querySelector('.about__main-figure');
+
+const mapAnhorEl = document.querySelector('.show-map-btn-js');
+const mapWrapperEl = document.querySelector('.map-wrapper');
 
 
 
-
-searchEl.addEventListener('click', openField);
-
-closeEl.addEventListener('click', closeField);
-
-
-function openField(e) {
-  e.preventDefault();
-  headerEl.classList.toggle('search-open');
-  searhFieldEl.focus();
-  this.removeEventListener('click', openField);
-};
-
-function closeField() {
-  headerEl.classList.remove('search-open');
-  searchEl.addEventListener('click', openField);
-}
-
+//клик Escape
 document.addEventListener('keydown', function (e) {
-  if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
-    headerEl.classList.remove('search-open');
-    searchEl.addEventListener('click', openField);
-    searhFieldEl.value = '';
-  };
-});
- 
-closeEl.addEventListener('click', function (e) {
-  e.preventDefault()
-  headerEl.classList.remove('search-open');
-  searchEl.addEventListener('click', openField);
-  searhFieldEl.value = '';
-});
+    if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
+        headerEl.classList.remove('search-open');
+        bodyEl.classList.remove('modal-open');
+        bodyEl.classList.remove('open-menu');
+        figureEl.classList.remove('open-banner-desc');
 
-document.addEventListener('click', function (e) {
-  if (!e.target.closest('.nav__searh')) {
-    headerEl.classList.remove('search-open');
-    searchEl.addEventListener('click', openField);
-    searhFieldEl.value = '';
-  };
+        searchEl.addEventListener('click', openField);
+        searhFieldEl.value = '';
+    };
 });
-
 
 

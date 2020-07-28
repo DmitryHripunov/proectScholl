@@ -2,6 +2,10 @@
   padding: 50px 0 30px;
   border-top: 1px solid #c7cfdc;
 
+  .footer-container {
+    position: relative;
+  }
+
   .footer__wrap {
     display: flex;
     flex-direction: column;
@@ -11,16 +15,17 @@
   }
 
   .footer__logo {
-    width: 220px;
+    width: 206px;
   }
-  
+
   .footer__title {
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.15px;
     color: #151515;
-    max-width: 590px;
+    max-width: 660px;
+    margin: 14px 0 10px 0;
   }
   .footer__addres {
     font-family: "ptsans";
@@ -33,19 +38,19 @@
   .footer__coop {
     font-family: "ptsans";
     font-size: 12px;
-    line-height: 16px;  
+    line-height: 16px;
     color: #92a0ba;
+    letter-spacing: 0.4px;
   }
 
   .footer__social-list {
     @include flex-between;
-    max-width: 120px;
-    margin: 24px 0 13px;
+    max-width: 130px;
+    margin: 20px 0 13px;
   }
 
   .footer__link {
     display: inline-block;
-
   }
 
   .footer__link {
@@ -54,21 +59,21 @@
     fill: #b7bad2;
   }
 
-  .footer__link:hover #grad1  {
+  .footer__link:hover #grad1 {
     opacity: 1;
     transition: opacity 0.3s;
   }
   #grad1 {
-    opacity: 0; 
+    opacity: 0;
   }
 
-  .footer__link:hover #grad2  {
+  .footer__link:hover #grad2 {
     opacity: 1;
     transition: opacity 0.3s;
   }
 
   #grad2 {
-    opacity: 0; 
+    opacity: 0;
   }
 
   .footer__link:hover #grad3 {
@@ -77,7 +82,7 @@
   }
 
   #grad3 {
-    opacity: 0; 
+    opacity: 0;
   }
 
   .footer__link:hover #grad4 {
@@ -86,15 +91,32 @@
   }
 
   #grad4 {
-    opacity: 0; 
+    opacity: 0;
   }
-
 }
 
-@media(max-width: 768px) {
+.moveUp {
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/svg/moveUp.svg");
+  position: absolute;
+  right: 13px;
+  bottom: 146px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
   .footer {
+    padding: 30px 0 22px;
     .footer-container {
       flex-direction: column;
+    }
+
+    .moveUp {
+      display: none;
     }
 
     .footer__logo {
@@ -103,7 +125,10 @@
 
     .footer__wrap {
       margin-left: 0;
-      margin-top: 20px;
-    } 
+    }
+
+    .footer__coop {
+      max-width: 200px;
+    }
   }
 }

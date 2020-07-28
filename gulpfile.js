@@ -85,10 +85,17 @@ function concatJs() {
     './src/js/jquery-3.4.1.min.js',
     './src/js/swiper.min.js',
     './src/js/main.js',
+    './src/js/search.js',
+    './src/js/main-menu.js',
+    './src/js/modal.js',
+    './src/js/form-style.js',
+    './src/js/banner-desc.js',
     './src/js/swipe.js',
+    './src/js/map.anhor.js',
   ])
     .pipe(concat('all.js'))
     .pipe(gulp.dest('build/js'))
+    // .pipe(gulp.dest('src/js'))
     .pipe(browserSync.stream()) 
 };
 
@@ -163,7 +170,7 @@ function watch() {
 
 
 function clean() {
-	return del(['build/*'])
+  return del(['build/*', 'src/js/all.js'])
 };
 
 function copy () {
@@ -179,7 +186,6 @@ function copy () {
     .pipe(gulp.dest('build'));
 };
 
-
 exports.css = css;
 exports.styles = styles; 
 exports.copy = copy;
@@ -193,6 +199,6 @@ exports.imgCompressed = imgCompressed;
 exports.pngCompressed = pngCompressed;                          
 exports.getWebp = getWebp; 
 
-exports.build = gulp.series(clean, css, gulp.parallel(styles), getWebp, pngCompressed, concatJs, babelJs, uglifyJs, html, copy, watch); 
+exports.build = gulp.series(clean, css, gulp.parallel(styles), concatJs, babelJs, uglifyJs, html, copy, watch); 
 
 exports.default = gulp.series(clean, css, gulp.parallel(styles), concatJs, babelJs, uglifyJs, html, copy, watch); 

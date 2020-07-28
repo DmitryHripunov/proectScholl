@@ -1,13 +1,14 @@
 
+// main banner
 var mySwiper = new Swiper('.main-section__banner', {
   speed: 400,
 	slidesPerView: 1,
 	loop: true,
   centeredSlides: true,
-  spaceBetween: 20,
+  spaceBetween: 1,
 	navigation: {
-		nextEl: '.btn_left',
-		prevEl: '.btn_right',
+    nextEl: '.btn_right',
+    prevEl: '.btn_left',
   },
   pagination: {
     el: '.pagination',
@@ -18,20 +19,18 @@ var mySwiper = new Swiper('.main-section__banner', {
   // autoplay: {
   //   delay: 5000,
   // },
-
 });
 
-
+// about banner
 var isSwiper = new Swiper('.about__main-banner', {
   speed: 600,
   slidesPerView: 1,
-  loop: true,
+  loop: false,
   centeredSlides: true,
-  effect: 'cube',
-  autoHeight: true,
+  spaceBetween: 1,
   navigation: {
-    nextEl: '.btn_left',
-    prevEl: '.btn_right',
+    nextEl: '.btn_right',
+    prevEl: '.btn_left',
   },
   pagination: {
     el: '.pagination',
@@ -41,6 +40,7 @@ var isSwiper = new Swiper('.about__main-banner', {
   },
 });
 
+// news links
 var linkSwiper = new Swiper('.links__list', {
   pagination: {
     el: '.pagination',
@@ -54,12 +54,36 @@ var linkSwiper = new Swiper('.links__list', {
     320: {
       slidesPerView: 2,
       speed: 400,
-
+      spaceBetween: 10,
     },
     // when window width is >= 550px
-    550: {
+    700: {
       slidesPerView: 12,
+      // spaceBetween: 10,
     }
   }
-
 });
+
+// information-swipe 
+var isSwiper = new Swiper('.information-swipe', {
+  pagination: {
+    el: '.pagination',
+    type: 'bullets',
+    bulletElement: 'span',
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      speed: 400,
+      spaceBetween: 130,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+    }
+  }
+});
+
+
