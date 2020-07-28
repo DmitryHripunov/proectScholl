@@ -41,8 +41,8 @@ function css() {
     .pipe(sourcemaps.init())
     .pipe(postcss([
       autoprefixer({ 
-        browsers: [
-          "last 2 version",
+        overrideBrowserslist: [
+          "last 4 version",
           "IE 10"
         ],
       })
@@ -86,11 +86,12 @@ function concatJs() {
     './src/js/swiper.min.js',
     './src/js/main.js',
     './src/js/search.js',
+    './src/js/swipe.js',
     './src/js/main-menu.js',
     './src/js/modal.js',
     './src/js/form-style.js',
+    './src/js/input-mask.js',
     './src/js/banner-desc.js',
-    './src/js/swipe.js',
     './src/js/map.anhor.js',
   ])
     .pipe(concat('all.js'))
