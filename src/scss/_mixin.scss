@@ -28,3 +28,15 @@
   background-image: url("../img/svg/Shape.svg");
   background-repeat: no-repeat;
 }
+
+@mixin breakpoint($point) {
+  @if $point == untilTablet {
+    @media (max-width: $tablet - 1) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: $tablet) {
+      @content;
+		}
+	}
+}

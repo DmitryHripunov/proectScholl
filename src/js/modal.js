@@ -25,4 +25,11 @@ modalElem.addEventListener('click', function (e) {
   };
 });
 
+document.addEventListener('keydown', function (e) {
+    if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
+        bodyEl.classList.remove('modal-open');
+
+    };
+});
+
 

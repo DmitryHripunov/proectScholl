@@ -5,3 +5,9 @@ bannerDescBtnEl.forEach((bannerBtn) => {
         bannerDesc.classList.toggle('open-banner-desc');
     });
 });
+
+document.addEventListener('keydown', function (e) {
+    if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
+        figureEl.classList.remove('open-banner-desc');
+    };
+});

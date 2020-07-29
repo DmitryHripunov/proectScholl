@@ -27,3 +27,12 @@ document.addEventListener('click', function (e) {
         searhFieldEl.value = '';
     };
 });
+
+document.addEventListener('keydown', function (e) {
+    if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
+        headerEl.classList.remove('search-open');
+
+        searchEl.addEventListener('click', openField);
+        searhFieldEl.value = '';
+    };
+});

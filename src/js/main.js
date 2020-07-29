@@ -33,16 +33,16 @@ const mapWrapperEl = document.querySelector('.map-wrapper');
 
 
 //клик Escape
-document.addEventListener('keydown', function (e) {
-    if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
-        headerEl.classList.remove('search-open');
-        bodyEl.classList.remove('modal-open');
-        bodyEl.classList.remove('open-menu');
-        figureEl.classList.remove('open-banner-desc');
+// document.addEventListener('keydown', function (e) {
+//     if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
+//         headerEl.classList.remove('search-open');
+//         bodyEl.classList.remove('modal-open');
+//         bodyEl.classList.remove('open-menu');
+//         figureEl.classList.remove('open-banner-desc');
 
-        searchEl.addEventListener('click', openField);
-        searhFieldEl.value = '';
-    };
-});
+//         searchEl.addEventListener('click', openField);
+//         searhFieldEl.value = '';
+//     };
+// });
 
 

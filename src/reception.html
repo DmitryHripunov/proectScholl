@@ -18,6 +18,7 @@
   <script src="js/search.js" defer></script>
   <script src="js/form-style.js" defer></script>
   <script src="js/input-mask.js" defer></script>
+  <script src="js/select-form.js" defer></script>
 </head>
 
 <body>
@@ -692,12 +693,29 @@
           <form class="block-section feedback" method="POST" action="#">
             <h2 class="second-heading-section ">Форма обращения</h2>
 
-            <select class="reception-form__input select" size="1" name="#" required>
-              <option class="option " value="" hidden disabled selected>Тема сообщения</option>
-              <option class="option" name="list" value="Прием ребенка в школу">Прием ребенка в школу</option>
-              <option class="option" name="list" value="Личный вопрос">Личный вопрос</option>
-              <option class="option" name="list" value="Отзыв или предложение">Отзыв или предложение</option>
-            </select>
+            <div class="dropdown input">
+              <input type="checkbox" class="dropdown__switch" id="filter-switch" hidden />
+              <label for="filter-switch" class="dropdown__options-filter">
+                <div class="dropdown__filter" role="listbox" tabindex="-1">
+                  <div class="dropdown__filter-selected" aria-selected="true">
+                    Тема сообщения
+                  </div>
+                  <dv>
+                    <div class="dropdown__select">
+                      <div class="dropdown__select-option" role="option">
+                        Прием ребенка в школу
+                      </div>
+                      <div class="dropdown__select-option" role="option">
+                        Личный вопрос
+                      </div>
+                      <div class="dropdown__select-option" role="option">
+                        Отзыв или предложение
+                      </div>
+                    </div>
+                  </dv>
+                </div>
+              </label>
+            </div>
 
             <div class="input">
               <input class="input__field" type="text" name="name" required>
@@ -715,7 +733,7 @@
             <textarea class="textarea" cols="40" rows="10" type="text" placeholder="Ваш вопрос" required></textarea>
 
             <div class="fedback-area">
-              <input name="file" type="file"  id="input__file" class="input input__file" multiple>
+              <input name="file" type="file" id="input__file" class="input input__file" multiple>
               <label for="input__file" class="input__file-button">
                  <span class="add-file input__file-button-text">Выберите файл</span>
               </label>

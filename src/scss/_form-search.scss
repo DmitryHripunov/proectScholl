@@ -2,11 +2,15 @@
   border: none;
   outline: none;
   width: 0;
-  min-height: 0;
+  height: 0;
   background-color: #EDF2F4;
   color: #919191;
   font-size: 14px;
   padding: 0;
+   &:focus {
+     outline: none;
+     border: none;
+   }
  }
 
 .search-open .search {

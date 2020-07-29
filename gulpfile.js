@@ -88,10 +88,11 @@ function concatJs() {
     './src/js/search.js',
     './src/js/swipe.js',
     './src/js/main-menu.js',
+    './src/js/banner-desc.js',
     './src/js/modal.js',
     './src/js/form-style.js',
     './src/js/input-mask.js',
-    './src/js/banner-desc.js',
+    './src/js/select-form.js',
     './src/js/map.anhor.js',
   ])
     .pipe(concat('all.js'))
