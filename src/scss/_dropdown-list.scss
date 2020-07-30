@@ -1,0 +1,70 @@
+.dropdown-list {
+  .dropdown-list__tab {
+    border-top: 1px solid $color-grey;
+    border-bottom: 1px solid $color-grey;
+    padding: 20px 50px 20px 0; 
+    width: 100%;
+    font-family: "ptsans";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.16px;
+    color: $color-link;
+    margin-bottom: -1px;
+    border-collapse: collapse;
+  }
+
+  .tab-label {
+    color: #000;
+    cursor: pointer;
+    transition: border-bottom .3s ease, background-color .3s ease;
+  }
+
+  .tab-label:hover {
+    color: $color-link;
+    background-color: #F8FAFC;
+    transition: border-bottom .3s ease, background-color .3s ease;
+  }
+
+  .tab-label::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/krestik.png");
+    width: 24px;
+    height: 24px;
+    right: 17px;
+    top: 17px;
+    color: #54688fa3;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .dropdown__items {
+    display: none;
+    height: 0;
+  }
+
+  .dropdown__items:last-child {
+    margin-bottom: 30px;
+  }
+  
+  .checked .tab-label::after {
+    background-image: url("../img/minus1.png");
+    transition: opacity 0.3s ease, max-height 1.2s ease-in;
+  }
+
+  .checked .dropdown__items {
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    padding: 0 47px 4px 24px;
+    display: block;
+
+  }
+
+  .checked .dropdown-list__tab {
+    margin-bottom: 30px;
+  }
+}

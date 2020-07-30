@@ -1,0 +1,80 @@
+.menu-page__items {
+  font-family: "ptsans";
+  margin: 4px 0;
+  padding: 4px 0;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.tab-label {
+  font-family: "ptsans";
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #444850;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: 22px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  text-align: left;
+  padding: 0 0 2px 0;
+  width: 100%;
+}
+
+@media (max-width: 950px) {
+  .menu-page__items {
+    display: none;
+    height: 0;
+  }
+
+  .tab-label {
+    cursor: pointer;
+    padding: 16px 0 16px 0;
+    border-bottom: 1px solid #8C9AAB;
+    border-top  : 1px  solid #8C9AAB;
+    border-collapse: collapse;
+    margin-top: -1px;
+    margin-bottom: 0;
+  }
+
+  .checked .tab-label {
+    margin-bottom: 12px;
+  }
+
+  .tab-label::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/krestik.png");
+    width: 24px;
+    height: 24px;
+    right: 0;
+    color: #54688fa3;
+    text-align: center;
+    transition: opacity 0.3s ease, max-height 1.2s ease-in;
+  }
+
+  .checked .tab-label::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    background-image: url("../img/minus1.png");
+    width: 24px;
+    height: 24px;
+    color: #54688fa3;
+    text-align: center;
+    transition: opacity 0.3s ease, max-height 1.2s ease-in;
+  }
+
+  .checked .menu-page__items {
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    padding-left: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease, max-height 1.2s ease-in;
+  }
+}
