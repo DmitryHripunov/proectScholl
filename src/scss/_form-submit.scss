@@ -100,6 +100,14 @@
     color: rgba(84, 104, 143, 0.64);
   }
 
+  .invalid .input__footnote {
+    display: none;
+  }
+
+  .input-focused .input__footnote  {
+    display: block;
+  }
+
   .checkbox[type="checkbox"] {
     border: 1px solid rgba(84, 104, 143, 0.64);
   }
@@ -145,7 +153,7 @@
       position: relative;
       display: flex;
       color: rgba(84, 104, 143, 0.64);
-      transition: transform .3s;
+      transition: transform 0.3s;
 
       &:after {
         position: absolute;
@@ -157,7 +165,7 @@
         border-right: 3px solid rgba(152, 152, 152, 0.6);
         border-bottom: 3px solid rgba(152, 152, 152, 0.6);
         transform: rotate(45deg) translateX(-45%);
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
         z-index: 111;
       }
     }
@@ -171,11 +179,12 @@
       width: 100%;
       margin-top: 0px;
       overflow: hidden;
-      box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
+        0px 9px 46px rgba(0, 0, 0, 0.12);
       transform: scaleY(0);
       transform-origin: top;
       border-radius: 4px;
-      transition: transform .2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
     }
 
     .dropdown__select-option {
@@ -187,8 +196,8 @@
     }
     .dropdown__select-option:hover {
       color: $color-link;
-      background-color: #EDF2F4;
-      transition: color .3s, background-color .3s;
+      background-color: #edf2f4;
+      transition: color 0.3s, background-color 0.3s;
     }
 
     .last-tape {
@@ -254,7 +263,39 @@
       font-size: 26px;
     }
   }
+
+  .form-error {
+    font-family: "ptsans";
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #f90000;
+    opacity: 0.87;
+    margin-top: 7px;
+    display: none;
+  }
+
+  .valid .form-error {
+    display: none !important;
+  }
+
+  .input-focused .form-error {
+    display: none !important;
+  }
+
+  .invalid .form-error {
+    display: block;
+  }
+
+  .invalid .input__label {
+    color: #f90000;
+  }
+
+  .input-focused .input__label {
+    color: $color-link !important;
+  }
 }
+
 
 @media (max-width: 508px) {
   .feedback {

@@ -101,6 +101,29 @@ function concatJs() {
     .pipe(browserSync.stream()) 
 };
 
+
+// function onlyConcatJs() {
+//   return gulp.src([
+//     './src/js/jquery-3.4.1.min.js',
+//     './src/js/jquery.fancybox.min.js',
+//     './src/js/swiper.min.js',
+//     './src/js/main.js',
+//     './src/js/search.js',
+//     './src/js/swipe.js',
+//     './src/js/main-menu.js',
+//     './src/js/modal.js',
+//     './src/js/form-style.js',
+//     './src/js/select-form.js',
+//     './src/js/input-mask.js',
+//     './src/js/banner-desc.js',
+//     './src/js/map.anhor.js',
+//   ])
+//     .pipe(concat('only.js'))
+//     .pipe(gulp.dest('src/js'))
+//     // .pipe(gulp.dest('src/js'))
+//     .pipe(browserSync.stream()) 
+// };
+
 function babelJs() {
   return gulp.src('build/js/all.js')
     .pipe(babel({
@@ -120,7 +143,7 @@ function uglifyJs() {
 };
 
 function getSprite() {
-  return gulp.src('img/*.svg')
+  return gulp.src('img/svg/*.svg')
     .pipe(svgStore({
       inlineSvg: true
     }))
@@ -199,7 +222,9 @@ exports.html = html;
 exports.getSprite = getSprite;
 exports.imgCompressed = imgCompressed;
 exports.pngCompressed = pngCompressed;                          
-exports.getWebp = getWebp; 
+exports.getWebp = getWebp;
+//  
+// exports.onlyConcatJs = onlyConcatJs; 
 
 exports.build = gulp.series(clean, css, gulp.parallel(styles), concatJs, babelJs, uglifyJs, html, copy, watch); 
 

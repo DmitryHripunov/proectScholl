@@ -12,6 +12,8 @@
   <link rel="preload" href="fonts/lato-medium-webfont.woff2" as="font">
   <link rel="preload" href="fonts/lato-heavy-webfont.woff2" as="font">
   <link rel="preload" href="fonts/PTSans-Bold.woff2" as="font">
+  <link rel="preload" href="img/svg/Shape1.svg" as="image">
+  <link rel="preload" href="img/svg/docs1.svg" as="image">
   <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
@@ -837,17 +839,18 @@
       <h2 class="second-heading-section">Задать вопрос</h2>
 
       <div class="input">
-        <input class="input__field" type="text" name="name" required>
+        <input class="input__field" type="text" name="Имя" required>
         <lable for="name" class="input__label">Ваше имя</lable>
       </div>
 
       <div class="input">
-        <input class="input__field mail" type="email" name="email" required>
+        <input class="input__field mail" type="email" name="Почта" required>
         <lable for="email" class="input__label">Электронная почта</lable>
         <span class="input__footnote">Мы пришлем вам уведомление об ответе</span>
+        <span class="form-error">Неправильный формат. Введите электронный почтовый адрес в формате text@mail.ru</span>
       </div>
  
-      <textarea class="textarea" cols="40" rows="10" name="textarea" type="textarea" placeholder="Ваш вопрос" required></textarea>
+      <textarea class="textarea" cols="40" rows="10" name="Вопрос" type="textarea" placeholder="Ваш вопрос" required></textarea>
 
 
       <label class="checkbox__footnote">
@@ -870,6 +873,7 @@
   <!-- end modal -->
 
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js" ></script>
   <script src="js/main-menu.js" ></script>
@@ -878,6 +882,7 @@
   <script src="js/form-style.js" ></script>
   <script src="js/banner-desc.js" ></script>
   <script src="js/swipe.js" ></script>
+
 </body>
 
 </html>
