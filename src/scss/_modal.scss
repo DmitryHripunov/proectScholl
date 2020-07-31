@@ -17,7 +17,10 @@
     flex-direction: column;
     z-index: 100;
     margin: auto;
+<<<<<<< HEAD
     overflow-y: scroll;
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   }
 
   .modal-content {
@@ -45,11 +48,16 @@
     background-position: center;
     position: absolute;
     top: 0px;
+<<<<<<< HEAD
     right: -8%;
+=======
+    right: 0px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     width: 40px;
     height: 40px;
   }
 
+<<<<<<< HEAD
    .close-modal:hover::before {
       background-color: #e9e9e9;
       width: 40px;
@@ -58,6 +66,8 @@
       transition: background-color .3s ease;
     }
 
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   .checkbox__footnote {
     font-family: "ptsans";
     display: inline-flex;
@@ -78,8 +88,13 @@
     flex-direction: column;
     max-width: 540px;
     background: #fff;
+<<<<<<< HEAD
     padding: 40px 40px 40px 40px;
     margin: 90px auto;
+=======
+    padding: 40px 40px 90px 40px;
+    margin: 20px auto;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 
     .success__desc {
       font-family: "ptsans";
@@ -94,8 +109,12 @@
     }
 
     .close-modal::before {
+<<<<<<< HEAD
       top: -30px;
       right: -30px;
+=======
+      top: -10px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     }
   }
 }
@@ -105,6 +124,7 @@
     .modal-content {
       padding: 35px 10px;
       border-radius: 4px;
+<<<<<<< HEAD
       margin-top: 70px;
     }
     .close-modal::before {
@@ -116,12 +136,22 @@
 
     .close-modal:hover::before {
       background-color: transparent;
+=======
+    }
+    .close-modal::before {
+      top: -10px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     }
 
     .success {
       .close-modal::before {
+<<<<<<< HEAD
         top: -100px;
         right: 0;
+=======
+        top: -30px;
+        right: -30px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
       }
 
       .success__desc {

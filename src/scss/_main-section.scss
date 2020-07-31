@@ -2,6 +2,7 @@
   padding: 30px 0;
 
   .main-section__banner {
+<<<<<<< HEAD
     width      : 736px;
     margin-left: 0;
     overflow   : hidden;
@@ -11,11 +12,23 @@
   .main-section__img {
     height       : 100%;
     width        : 100%;
+=======
+    width: 736px;
+    margin-left: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .main-section__img {
+    height: 100%;
+    width: 100%;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     margin-bottom: -1px;
   }
 
   .main-section__figure {
     position: relative;
+<<<<<<< HEAD
     height  : 432px;
 
     &::after {
@@ -27,11 +40,26 @@
       top   : 140px;
       left  : 0;
       right : 0;
+=======
+    height: 432px;
+    &::after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(
+        0.32deg,
+        rgba(0, 0, 0, 0.85) 0.46%,
+        rgba(0, 0, 0, 0) 98.69%
+      );
+      top: 140px;
+      left: 0;
+      right: 0;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
       bottom: 0;
     }
   }
 
   .main-section__figcaption {
+<<<<<<< HEAD
     position      : absolute;
     bottom        : 50px;
     left          : 35px;
@@ -42,6 +70,18 @@
     color         : #ffffff;
     max-width     : 550px;
     z-index       : 1;
+=======
+    position: absolute;
+    bottom: 50px;
+    left: 35px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: #ffffff;
+    max-width: 550px;
+    z-index: 1;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   }
 
   .main-section__aside {
@@ -51,6 +91,7 @@
     .school-banner {
       position        : relative;
       background-image: url("../img/s66.jpg");
+<<<<<<< HEAD
       position        : relative;
       height          : 185px;
       width           : 100%;
@@ -66,6 +107,26 @@
           linear-gradient(50.54deg,
             rgba(0, 0, 0, 0.52) 15.67%,
             rgba(0, 0, 0, 0) 100.2%);
+=======
+      position: relative;
+      height: 185px;
+      width: 100%;
+      color: #ffffff;
+      padding: 100px 0 12px;
+      &::after {
+        @include all-position;
+        content: "";
+        background: linear-gradient(
+            168.2deg,
+            rgba(0, 0, 0, 0.52) 6.53%,
+            rgba(0, 0, 0, 0) 35.84%
+          ),
+          linear-gradient(
+            50.54deg,
+            rgba(0, 0, 0, 0.52) 15.67%,
+            rgba(0, 0, 0, 0) 100.2%
+          );
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
       }
 
       .school-banner__title {
@@ -93,6 +154,7 @@
         content     : "";
         border-left : 2px solid #fff;
         border-right: 2px solid #fff;
+<<<<<<< HEAD
         height      : 100%;
         width       : 100%;
         z-index     : 1;
@@ -101,6 +163,16 @@
 
       .school-banner__desc {
         margin   : 6px 0px 3px 20px;
+=======
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        left: -4px;
+      }
+
+      .school-banner__desc {
+        margin: 6px 0px 3px 20px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
         font-size: 32px;
         z-index  : 1;
       }
@@ -108,16 +180,24 @@
       .school-banner__figcaption {
         z-index    : 1;
         font-family: "ptsans";
+<<<<<<< HEAD
         font-size  : 16px;
         margin     : 0 auto;
         width      : 100px;
         text-align : left;
+=======
+        font-size: 16px;
+        margin: 0 auto;
+        width: 100px;
+        text-align: left;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
         line-height: 85%;
         margin-left: 22px;
       }
     }
 
     .director {
+<<<<<<< HEAD
       position        : relative;
       margin          : 16px 0;
       width           : 100%;
@@ -138,25 +218,59 @@
         left             : 0;
         width            : 95px;
         height           : 100%;
+=======
+      position: relative;
+      margin: 16px 0;
+      width: 100%;
+      padding-bottom: 20px;
+      padding-right: 35px;
+      background-color: #edf2f5;
+      padding-left: 120px;
+      @include arrow;
+      background-position: 95% 75%;
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("../img/s64.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 95px;
+        height: 100%;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
       }
 
       .block-link {
         display: inline-block;
+<<<<<<< HEAD
 
         &::after {
           @include all-position;
           content: "";
           z-index: 10;
+=======
+        &::after {
+          @include all-position;
+          content: "";
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
         }
       }
 
       .director__title {
         color         : #56688e;
         text-transform: uppercase;
+<<<<<<< HEAD
         font-size     : 10px;
         margin        : 15px 0 7px 0;
         text-align    : left;
         font-weight   : 500;
+=======
+        font-size: 10px;
+        margin: 15px 0 7px 0;
+        text-align: left;
+        font-weight: 500;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
         letter-spacing: 1px;
       }
 
@@ -165,6 +279,7 @@
         font-weight   : 600;
         line-height   : 22px;
         letter-spacing: 0.15px;
+<<<<<<< HEAD
         margin        : 0;
         width         : 199px;
         transition: color .3s;
@@ -179,16 +294,26 @@
       .director__name {
         color     : $color-link;
         transition: color .3s;
+=======
+        margin: 0;
+        width: 199px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
       }
     }
 
     .docs {
+<<<<<<< HEAD
       width     : 100%;
       min-height: 96px;
 
+=======
+      width: 100%;
+      min-height: 96px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
       .docs__data {
         display         : inline-block;
         background-color: #edf2f5;
+<<<<<<< HEAD
         width           : 210px;
         padding         : 15px 20px;
         line-height     : 22px;
@@ -204,6 +329,22 @@
         border     : 1px solid #dadfe6;
         text-align : center;
         padding    : 14px;
+=======
+        width: 210px;
+        padding: 15px 20px;
+        line-height: 22px;
+        font-weight: 600;
+        @include arrow;
+        background-position: 170px 63px;
+      }
+
+      .docs__app {
+        position: relative;
+        width: 130px;
+        border: 1px solid #dadfe6;
+        text-align: center;
+        padding: 14px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
         font-family: "ptsans";
         @include arrow;
         background-image: url("../img/svg/Shape.svg");
@@ -266,6 +407,20 @@
       object-fit: fill;
     }
 
+    .main-section__figcaption {
+      max-width: 500px;
+    }
+
+    .main-section__img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+
+    .no-text-banner {
+      object-fit: fill;
+    }
+
     .main-section__banner {
       margin: auto;
       width : 80%;
@@ -283,6 +438,7 @@
     .main-section__aside {
       .school-banner__items {
         width: calc(100% / 3);
+<<<<<<< HEAD
       }
 
       .school-banner__figcaption {
@@ -293,10 +449,23 @@
         max-width: 300px;
         width    : 33% !important;
         left     : 5px;
+=======
+      }
+
+      .school-banner__figcaption {
+        width: 0 !important;
+      }
+
+      .school-banner__items:nth-child(2) {
+        max-width: 300px;
+        width: 33% !important;
+        left: 5px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
       }
     }
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 768px) {
   .main-section {
@@ -319,6 +488,28 @@
           margin: 6px 0px 3px 14px;
         }
 
+=======
+
+@media (max-width: 768px) {
+  .main-section {
+    .main-section__banner {
+      width: 100%;
+      height: vw(1340);
+    }
+
+    .main-section__figure {
+      height: 100%;
+    }
+
+    .main-section__aside {
+      width: 100%;
+      .school-banner {
+        height: 180px;
+        .school-banner__desc {
+          margin: 6px 0px 3px 14px;
+        }
+
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
         .school-banner__figcaption {
           margin-left: 15px;
         }
@@ -332,11 +523,19 @@
     padding-top: 110px;
 
     .main-section__figcaption {
+<<<<<<< HEAD
       font-size  : 16px;
       max-width  : 260px;
       line-height: 22px;
       bottom     : 30px;
       left       : 20px;
+=======
+      font-size: 16px;
+      max-width: 260px;
+      line-height: 22px;
+      bottom: 30px;
+      left: 20px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     }
 
     .main-section__figure::after {
@@ -349,29 +548,47 @@
   .main-section {
     .main-section__aside {
       .director {
+<<<<<<< HEAD
         padding-left       : 110px;
         padding-bottom     : 40px;
+=======
+        padding-left: 110px;
+        padding-bottom: 40px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
         background-position: 39% 87%;
       }
 
       .docs {
         .docs__data {
+<<<<<<< HEAD
           width              : 177px;
           background-position: 134px 63px;
           margin-right       : 10px;
           padding            : 15px 12px;
+=======
+          width: 177px;
+          background-position: 134px 63px;
+          margin-right: 10px;
+          padding: 15px 12px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
         }
 
         .docs__app {
           background-position: 88px 62px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
           &::after {
             left: 15px;
           }
         }
       }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     .main-section__img {
       min-height: 218px;
     }

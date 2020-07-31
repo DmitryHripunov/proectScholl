@@ -40,7 +40,11 @@ var isSwiper = new Swiper('.about__main-banner', {
   },
 });
 
+<<<<<<< HEAD
 // links
+=======
+// news links
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 var linkSwiper = new Swiper('.links__list', {
   pagination: {
     el: '.pagination',
@@ -54,18 +58,26 @@ var linkSwiper = new Swiper('.links__list', {
     320: {
       slidesPerView: 2,
       speed: 400,
-
+      spaceBetween: 10,
     },
     // when window width is >= 550px
     700: {
+<<<<<<< HEAD
       slidesPerView: 12,      
+=======
+      slidesPerView: 12,
+      // spaceBetween: 10,
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     }
   }
 });
 
 // information-swipe 
 var isSwiper = new Swiper('.information-swipe', {
+<<<<<<< HEAD
   
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   pagination: {
     el: '.pagination',
     type: 'bullets',
