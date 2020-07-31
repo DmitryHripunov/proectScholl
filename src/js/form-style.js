@@ -16,10 +16,18 @@ inputsEl.forEach((inputEl) => {
   maillEl.addEventListener('blur', function (e) {
     const Focused = e.target.closest('.input');
     if (!maillEl.value.includes('@')) {
+<<<<<<< HEAD
       Focused.classList.remove('input-focused');
       Focused.classList.add('invalid');
     }
     
+=======
+
+      Focused.classList.remove('input-focused');
+      Focused.classList.add('invalid');
+    }
+
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     if (maillEl.value === '') {
       Focused.classList.remove('input-focused');
       Focused.classList.remove('invalid');

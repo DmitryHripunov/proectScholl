@@ -46,6 +46,7 @@ const figureEl = document.querySelector('.about__main-figure');
 const mapAnhorEl = document.querySelector('.show-map-btn-js');
 const mapWrapperEl = document.querySelector('.map-wrapper');
 
+<<<<<<< HEAD
 const moveUpEl = document.querySelector('.moveUp-js');
 
 moveUpEl.addEventListener('click', function (e) {
@@ -55,6 +56,23 @@ moveUpEl.addEventListener('click', function (e) {
         block: 'start'
     });
 });
+=======
+
+
+//клик Escape
+// document.addEventListener('keydown', function (e) {
+//     if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
+//         headerEl.classList.remove('search-open');
+//         bodyEl.classList.remove('modal-open');
+//         bodyEl.classList.remove('open-menu');
+//         figureEl.classList.remove('open-banner-desc');
+
+//         searchEl.addEventListener('click', openField);
+//         searhFieldEl.value = '';
+//     };
+// });
+
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 
 
 searchEl.addEventListener('click', openField);
@@ -137,7 +155,11 @@ var isSwiper = new Swiper('.about__main-banner', {
   },
 });
 
+<<<<<<< HEAD
 // links
+=======
+// news links
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 var linkSwiper = new Swiper('.links__list', {
   pagination: {
     el: '.pagination',
@@ -151,18 +173,30 @@ var linkSwiper = new Swiper('.links__list', {
     320: {
       slidesPerView: 2,
       speed: 400,
+<<<<<<< HEAD
 
     },
     // when window width is >= 550px
     700: {
       slidesPerView: 12,      
+=======
+      spaceBetween: 10,
+    },
+    // when window width is >= 550px
+    700: {
+      slidesPerView: 12,
+      // spaceBetween: 10,
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     }
   }
 });
 
 // information-swipe 
 var isSwiper = new Swiper('.information-swipe', {
+<<<<<<< HEAD
   
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   pagination: {
     el: '.pagination',
     type: 'bullets',
@@ -206,8 +240,11 @@ document.addEventListener('keydown', function (e) {
     };
 });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 modalContentEl.addEventListener('click', function (e) {
   e.preventDefault();
 
@@ -262,10 +299,18 @@ inputsEl.forEach((inputEl) => {
   maillEl.addEventListener('blur', function (e) {
     const Focused = e.target.closest('.input');
     if (!maillEl.value.includes('@')) {
+<<<<<<< HEAD
       Focused.classList.remove('input-focused');
       Focused.classList.add('invalid');
     }
     
+=======
+
+      Focused.classList.remove('input-focused');
+      Focused.classList.add('invalid');
+    }
+
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     if (maillEl.value === '') {
       Focused.classList.remove('input-focused');
       Focused.classList.remove('invalid');
@@ -276,6 +321,7 @@ inputsEl.forEach((inputEl) => {
 
 
 
+<<<<<<< HEAD
 
 // Change option selected
 const label = document.querySelector('.dropdown__filter-selected')
@@ -323,11 +369,47 @@ inputMask.addEventListener('blur', function (e) {
   }
 });
 
+=======
+inputMask.addEventListener('focus', function (e) {
+  let foc = e.target.closest('.input');
+  foc.classList.remove('input-focused')
+  foc.classList.add('invalid');
+
+  if (inputMask.value.length >= 14) {
+    foc.classList.add('input-focused')
+    foc.classList.remove('invalid');
+  }
+
+
+});
+
+inputMask.addEventListener('blur', function (e) {
+  let foc = e.target.closest('.input');
+  if (inputMask.value.length >= 14) {
+    foc.classList.add('input-focused')
+    foc.classList.remove('invalid');
+  }
+});
+
+// tel mask
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 inputMask.addEventListener('keydown', function (event) {
   if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
     event.preventDefault()
   }
   let mask = '+7 111 111-11-11';
+<<<<<<< HEAD
+=======
+  let foc = event.target.closest('.input');
+
+  foc.classList.remove('input-focused')
+  foc.classList.add('invalid');
+
+  if (inputMask.value.length >= 14) {
+    foc.classList.add('input-focused')
+    foc.classList.remove('invalid');
+  }
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 
   if (/[0-9\+\ \-\(\)]/.test(event.key)) {
     let currentString = this.value;
@@ -347,7 +429,10 @@ inputMask.addEventListener('keydown', function (event) {
     }
   }
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 bannerDescBtnEl.forEach((bannerBtn) => {
     bannerBtn.addEventListener('click', function (e) {
         const bannerDesc = e.target.closest('.about__main-figure');
@@ -362,6 +447,10 @@ document.addEventListener('keydown', function (e) {
     };
 });
 
+<<<<<<< HEAD
+=======
+// map
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 mapAnhorEl.addEventListener('click', function (e) {
     e.preventDefault();
     const sectionElem = mapAnhorEl.getAttribute('href');

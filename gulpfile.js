@@ -88,11 +88,19 @@ function concatJs() {
     './src/js/search.js',
     './src/js/swipe.js',
     './src/js/main-menu.js',
+<<<<<<< HEAD
     './src/js/modal.js',
     './src/js/form-style.js',
     './src/js/select-form.js',
     './src/js/input-mask.js',
     './src/js/banner-desc.js',
+=======
+    './src/js/banner-desc.js',
+    './src/js/modal.js',
+    './src/js/form-style.js',
+    './src/js/input-mask.js',
+    './src/js/select-form.js',
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     './src/js/map.anhor.js',
   ])
     .pipe(concat('all.js'))

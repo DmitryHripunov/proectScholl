@@ -132,12 +132,17 @@
 
   .block-navigation .pagination {
     padding-top: 0;
+<<<<<<< HEAD
     margin-top : 40px;
+=======
+    margin-top : 30px;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   }
 }
 
 // news-more
 .news-more-section {
+<<<<<<< HEAD
   padding: 0 !important;
 
   .news__main {
@@ -152,6 +157,14 @@
   .news-more-section__img {
     min-height: 260px;
     object-fit: cover;
+=======
+  .news__main {
+    width: 100%;
+  }
+
+  .news-more-section__img {
+    margin: 24px 0 32px 0;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   }
 
   .main-heading-section {
@@ -257,17 +270,29 @@
   .block-navigation {
     border-top: none;
   }
+<<<<<<< HEAD
 
   .galery__list {
     display        : flex;
     flex-wrap      : wrap;
+=======
+  .galery__list {
+    display: flex;
+    flex-wrap: wrap;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     justify-content: space-between;
   }
 
   .galery__img {
+<<<<<<< HEAD
     width        : 160px;
     height       : 110px;
     object-fit   : cover;
+=======
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
     margin-bottom: 24px;
   }
 
@@ -276,6 +301,7 @@
   }
 }
 
+<<<<<<< HEAD
 // .myFancyBox
 .myFancyBox .fancybox-thumbs {
   top       : auto;
@@ -315,6 +341,8 @@
 }
 
 
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 @media (max-width: 768px) {
   .news-more-section {
     .block-navigation .pagination__link--arrow {
@@ -333,6 +361,7 @@
       background-image: none;
     }
   }
+<<<<<<< HEAD
 
   .feedback-section {
     display: block !important;
@@ -341,6 +370,11 @@
   // .myFancyBox .fancybox-thumbs {
   //   display: none;
   // }
+=======
+  .feedback-section {
+    display: block !important;
+  }
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 }
 
 @media(max-width: 375px) {
@@ -348,11 +382,14 @@
     .galery__list {
       justify-content: center;
     }
+<<<<<<< HEAD
 
     .galery__img {
       width: 100%;
       object-fit: cover;
       min-height: 250px;
     }
+=======
+>>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   }
 }
