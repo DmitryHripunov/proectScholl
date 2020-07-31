@@ -684,7 +684,8 @@
           </ol>
 
           <!-- feedback -->
-          <form class="block-section feedback" action="https://jsonplaceholder.typicode.com/posts" target ="_blank" method="POST">
+          <form class="block-section feedback" action="https://jsonplaceholder.typicode.com/posts" target="_blank"
+            method="POST">
             <h2 class="second-heading-section ">Форма обращения</h2>
 
             <div class="dropdown input">
@@ -712,19 +713,24 @@
             </div>
 
             <div class="input">
-              <input class="input__field" type="text" name="name" required>
+              <input class="input__field" type="text" name="Имя" required>
               <lable for="name" class="input__label">Ваше имя</lable>
             </div>
             <div class="input">
-              <input class="input__field tel" type="tel" name="tel" onfocus="(this.value='+7')" required>
+              <input class="input__field tel selector" type="tel" name="Телефон" pattern="[\+]\d{1}\s\d{3}\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="16"
+                onfocus="(!this.value.length ? this.value='+7 ' : this.value=this.value)" >
               <lable for="tel" class="input__label">Телефон</lable>
+              <span class="form-error">Это обязательное поле. Введите телефон в формате +7 999 999-99-99</span>
             </div>
             <div class="input">
-              <input class="input__field mail" type="email" name="email" required>
+              <input class="input__field mail" type="email" name="Почта" required>
               <lable for="email" class="input__label">Электронная почта</lable>
+              <span class="form-error">Неправильный формат. Введите электронный почтовый адрес в формате
+                text@mail.ru</span>
             </div>
 
-            <textarea class="textarea" cols="40" rows="10" name="textarea" type="textarea" placeholder="Ваш вопрос" required></textarea>
+            <textarea class="textarea" cols="40" rows="10" name="Вопрос" type="textarea"
+              placeholder="Ваш вопрос"></textarea>
 
             <div class="fedback-area">
               <input name="file" type="file" id="input__file" class="input input__file" multiple>
@@ -834,12 +840,14 @@
     </div>
   </footer>
   <!-- end footer -->
+
   <script src="js/main.js"></script>
   <script src="js/main-menu.js"></script>
   <script src="js/search.js"></script>
   <script src="js/form-style.js"></script>
   <script src="js/input-mask.js"></script>
   <script src="js/select-form.js"></script>
+
 </body>
 
 </html>

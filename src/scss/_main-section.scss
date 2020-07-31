@@ -167,11 +167,14 @@
         letter-spacing: 0.15px;
         margin        : 0;
         width         : 199px;
+        transition: color .3s;
       }
     }
 
     .director:hover {
       background-image: url("../img/svg/Shape1.svg");
+      transition: background-image .3s;
+      transition: color .3s;
 
       .director__name {
         color     : $color-link;
@@ -192,6 +195,7 @@
         font-weight     : 600;
         @include arrow;
         background-position: 170px 63px;
+        transition: color .3s;
       }
 
       .docs__app {
@@ -202,7 +206,9 @@
         padding    : 14px;
         font-family: "ptsans";
         @include arrow;
+        background-image: url("../img/svg/Shape.svg");
         background-position: 95px 60px;
+        transition: color .3s;
 
         &::after {
           position         : absolute;
@@ -213,6 +219,7 @@
           left             : 25px;
           width            : 25px;
           height           : 35px;
+          transition: color .3s, background-image  .3s;
         }
       }
 
@@ -224,10 +231,12 @@
 
       .docs__app:hover {
         color: $color-link;
-        background-image: url("../img/svg/Shape1.svg");
-        transition: color .3s;
-        &::after {
+        background-image : url("../img/svg/Shape1.svg");
+        transition: color .3s, background-image .3s;
+
+        &::after {         
           background-image : url("../img/svg/docs1.svg");
+          transition: color .3s, background-image  .3s;
         }
       }
 

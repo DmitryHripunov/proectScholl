@@ -25,36 +25,14 @@ const closeEl = document.querySelector('.search-close-js');
 const openMenuEl = document.querySelectorAll('.open-menu-js');
 const menuEl = document.querySelectorAll('.menu-page');
 
-const tabEl = document.querySelectorAll('.tab-label-js');
-const tabListEl = document.querySelector('.menu-page__list-js'); 
-
 const modalContentEl = document.querySelector('.modal-content-js');
 const modalElem = document.querySelector('.modal-js');
-const focusFieldEl = document.querySelector('.input__field');
+const focusFieldEl = document.querySelector('.modal__input-js');
 const modalCloseEl = document.querySelector('.close-modal-js');
 const successBtnEl = document.querySelector('.success__btn-js');
 
-const inputsEl = document.querySelectorAll('.input__field');
-const labelEl = document.querySelectorAll('.input');
-const maillEl = document.querySelector('.mail');
-const inputMask = document.querySelector('.tel');
-
-
-const bannerDescBtnEl = document.querySelectorAll('.about__main-btn-js');
+const bannerDescEl = document.querySelector('.about__main-btn-js');
 const figureEl = document.querySelector('.about__main-figure');
-
-const mapAnhorEl = document.querySelector('.show-map-btn-js');
-const mapWrapperEl = document.querySelector('.map-wrapper');
-
-const moveUpEl = document.querySelector('.moveUp-js');
-
-moveUpEl.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector('.header').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
-});
 
 
 searchEl.addEventListener('click', openField);
@@ -86,23 +64,77 @@ document.addEventListener('click', function (e) {
         searhFieldEl.value = '';
     };
 });
+openMenuEl.forEach((menuLink) => {
+    menuLink.addEventListener('click', function (e) {
+        e.preventDefault()
+        headerEl.classList.toggle('open-menu');
+    });
+});
 
+modalContentEl.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    bodyEl.classList.toggle('modal-open');
+
+    if (modalElem.getAttribute('aria-modal') == 'false') {
+        modalElem.setAttribute('aria-modal', 'true'),
+            modalElem.setAttribute('aria-hidden', 'false');
+    } else {
+        modalElem.setAttribute('aria-modal', 'false'),
+            modalElem.setAttribute('aria-hidden', 'true');
+    }
+
+    focusFieldEl.focus();
+});
+
+// succcess
+successBtnEl.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    bodyEl.classList.remove('modal-open');
+});
+
+//кнопка закрыть модальное окно
+modalCloseEl.addEventListener('click', function (e) {
+    e.preventDefault()
+    bodyEl.classList.remove('modal-open');
+    // modalContentEl.reset();
+    modalElem.setAttribute('aria-modal', 'false'),
+        modalElem.setAttribute('aria-hidden', 'true');
+});
+
+//клик Escape
 document.addEventListener('keydown', function (e) {
     if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
         headerEl.classList.remove('search-open');
+        bodyEl.classList.remove('modal-open');
 
         searchEl.addEventListener('click', openField);
         searhFieldEl.value = '';
     };
 });
 
-// main banner
+// клик вне модального окна
+modalElem.addEventListener('click', function (e) {
+    if (!e.target.closest('.modal-content-js')) {
+
+        bodyEl.classList.remove('modal-open');
+        // modalContentEl.reset();
+        modalElem.setAttribute('aria-modal', 'false'),
+            modalElem.setAttribute('aria-hidden', 'true');
+    };
+});
+
+bannerDescEl.addEventListener('click', () => {
+    figureEl.classList.toggle('open-banner-desc');
+});
+
 var mySwiper = new Swiper('.main-section__banner', {
   speed: 400,
 	slidesPerView: 1,
 	loop: true,
   centeredSlides: true,
-  spaceBetween: 1,
+  spaceBetween: 20,
 	navigation: {
     nextEl: '.btn_right',
     prevEl: '.btn_left',
@@ -116,15 +148,17 @@ var mySwiper = new Swiper('.main-section__banner', {
   // autoplay: {
   //   delay: 5000,
   // },
+
 });
 
-// about banner
+
 var isSwiper = new Swiper('.about__main-banner', {
   speed: 600,
   slidesPerView: 1,
-  loop: false,
+  loop: true,
   centeredSlides: true,
-  spaceBetween: 1,
+  effect: 'cube',
+  autoHeight: true,
   navigation: {
     nextEl: '.btn_right',
     prevEl: '.btn_left',
@@ -137,7 +171,6 @@ var isSwiper = new Swiper('.about__main-banner', {
   },
 });
 
-// links
 var linkSwiper = new Swiper('.links__list', {
   pagination: {
     el: '.pagination',
@@ -154,219 +187,9 @@ var linkSwiper = new Swiper('.links__list', {
 
     },
     // when window width is >= 550px
-    700: {
-      slidesPerView: 12,      
+    550: {
+      slidesPerView: 12,
     }
   }
-});
 
-// information-swipe 
-var isSwiper = new Swiper('.information-swipe', {
-  
-  pagination: {
-    el: '.pagination',
-    type: 'bullets',
-    bulletElement: 'span',
-    clickable: true,
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 2,
-      speed: 400,
-      spaceBetween: 130,
-    },
-    // when window width is >= 768px
-    768: {
-      slidesPerView: 3,
-    }
-  }
-});
-
-
-
-openMenuEl.forEach((menuLink) => {
-    menuLink.addEventListener('click', function (e) {
-        e.preventDefault()
-        bodyEl.classList.toggle('open-menu');
-    });
-});
-
-tabEl.forEach((menuBtn) => {
-    menuBtn.addEventListener('click', function (e) {
-        const tabItem = e.target.closest('.menu-page__list');
-
-        tabItem.classList.toggle('checked');
-    });
-});
-
-document.addEventListener('keydown', function (e) {
-    if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
-        bodyEl.classList.remove('open-menu');
-    };
-});
-
-
-
-modalContentEl.addEventListener('click', function (e) {
-  e.preventDefault();
-
-  bodyEl.classList.toggle('modal-open');
-  focusFieldEl.focus();
-});
-
-// succcess
-successBtnEl.addEventListener('click', (e) => {
-  e.preventDefault()
-
-  bodyEl.classList.remove('modal-open');
-});
-
-//кнопка закрыть модальное окно
-modalCloseEl.addEventListener('click', function (e) {
-  e.preventDefault()
-  bodyEl.classList.remove('modal-open');
-});
-
-// клик вне окна
-modalElem.addEventListener('click', function (e) {
-  if (!e.target.closest('.modal-content-js')) {
-    bodyEl.classList.remove('modal-open');
-  };
-});
-
-document.addEventListener('keydown', function (e) {
-    if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
-        bodyEl.classList.remove('modal-open');
-
-    };
-});
-
-
-
-inputsEl.forEach((inputEl) => {
-  inputEl.addEventListener('focus', function (e) {
-    const inputFocused = e.target.closest('.input');
-    inputFocused.classList.add('input-focused');
-  });
-
-  inputEl.addEventListener('blur', function (e) {
-    const inputFocusEL = e.target.closest('.input');
-    if (inputEl.value === '') {
-      labelEl.forEach((labelElem) => {
-        inputFocusEL.classList.remove('input-focused');
-      });
-    }
-  });
-
-  maillEl.addEventListener('blur', function (e) {
-    const Focused = e.target.closest('.input');
-    if (!maillEl.value.includes('@')) {
-      Focused.classList.remove('input-focused');
-      Focused.classList.add('invalid');
-    }
-    
-    if (maillEl.value === '') {
-      Focused.classList.remove('input-focused');
-      Focused.classList.remove('invalid');
-    }
-  });
-});
-
-
-
-
-
-// Change option selected
-const label = document.querySelector('.dropdown__filter-selected')
-const options = Array.from(document.querySelectorAll('.dropdown__select-option'))
-
-options.forEach((option) => {
-    option.addEventListener('click', () => {
-        label.textContent = option.textContent
-        
-    })
-})
-
-// Close dropdown 
-document.addEventListener('click', (e) => {
-    const toggle = document.querySelector('.dropdown__switch')
-    const element = e.target
-
-    if (element == toggle) return;
-
-    const isDropdownChild = element.closest('.dropdown__filter')
-
-    if (!isDropdownChild) {
-        toggle.checked = false
-    }
-})
-// var im = new Inputmask();
-// im.mask(inputMask)
-
-// Inputmask({
-//    "mask": "+7 999 999 99-99",
-//     showMaskOnHover: false,
-//     autoUnmask: false,
-//   }).mask(inputMask);
-
-inputMask.addEventListener('blur', function (e) {
-  let foc = e.target.closest('.input');
-  if (inputMask.value.length <= 15) {
-    foc.classList.remove('input-focused')
-    foc.classList.add('invalid');
-  }
-
-  if (!inputMask.value.length) {
-    foc.classList.remove('input-focused')
-    foc.classList.remove('invalid')
-  }
-});
-
-inputMask.addEventListener('keydown', function (event) {
-  if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
-    event.preventDefault()
-  }
-  let mask = '+7 111 111-11-11';
-
-  if (/[0-9\+\ \-\(\)]/.test(event.key)) {
-    let currentString = this.value;
-    let currentLength = currentString.length;
-    if (/[0-9]/.test(event.key)) {
-      if (mask[currentLength] == '1') {
-        this.value = currentString + event.key;
-      } else {
-        for (var i = currentLength; i < mask.length; i++) {
-          if (mask[i] == '1') {
-            this.value = currentString + event.key;
-            break;
-          }
-          currentString += mask[i];
-        }
-      }
-    }
-  }
-});
-
-bannerDescBtnEl.forEach((bannerBtn) => {
-    bannerBtn.addEventListener('click', function (e) {
-        const bannerDesc = e.target.closest('.about__main-figure');
-
-        bannerDesc.classList.toggle('open-banner-desc');
-    });
-});
-
-document.addEventListener('keydown', function (e) {
-    if (e.target === "Escape" || e.target === "Esc" || e.keyCode === 27) {
-        figureEl.classList.remove('open-banner-desc');
-    };
-});
-
-mapAnhorEl.addEventListener('click', function (e) {
-    e.preventDefault();
-    const sectionElem = mapAnhorEl.getAttribute('href');
-    document.querySelector('' + sectionElem).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
 });
