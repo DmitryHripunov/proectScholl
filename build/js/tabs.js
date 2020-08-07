@@ -1,0 +1,1 @@
+"use strict";$(".block-docs__menu-btn").on("click",function(e){e.preventDefault(),$(".block-docs__menu-btn").removeClass("active"),$(this).addClass("active");var s=$(this).attr("href");$(".block-docs__pane ").removeClass("active").removeClass("in"),$(s).addClass("active"),setTimeout(function(){$(s).addClass("in")},250)});
