@@ -18,8 +18,5 @@ document.addEventListener('keydown', function (e) {
         bodyEl.classList.remove('open-menu');
     };
 });
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d

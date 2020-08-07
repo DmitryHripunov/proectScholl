@@ -11,7 +11,6 @@
     width: 140px;
     height: 140px;
     background-color: #edf2f4;
-<<<<<<< HEAD
     padding: 10px;
   }
 
@@ -21,14 +20,6 @@
     max-height: 140px;
   }
 
-=======
-    background-image: url("../img/license.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 10px;
-  }
-
->>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
   .information-swipe__items:not(:last-child) {
     margin-right: -10px;
   }
@@ -48,15 +39,6 @@
   }
 }
 
-<<<<<<< HEAD
-=======
-// @media (max-width: 830px) {
-//   .information-swipe {
-//     width: 600px;
-//   }
-// }
-
->>>>>>> 7d376c948b2561213ca73569d9acb3a2126cdd5d
 @media (max-width: 768px) {
   .information-swipe {
     max-width: 100%;
